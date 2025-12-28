@@ -1,16 +1,24 @@
+---
+const pageTitle = "Blog";
+---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Matias Tupper</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">Home</a>
         <a href="/about/">About</a>
 		<a href="/blog/">Blog</a>
-		<h1>Matias Tupper's Blog</h1>
-        <p>This is my blog. Here I'll mostly be posting about my experiences with engineering, programming, and other things. I'll be keepoing this updated almost a s a journal to keep trakc of the things I learn on my journey to get into graphics programming.</p>
-	</body>
+		<h1>{pageTitle}</h1>
+        <p>This is my blog. Here I'll mostly be posting about my experiences with engineering, programming, and other things. I'll be keepoing this updated almost as a journal to keep trakc of the things I learn on my journey to get into graphics programming.</p>
+        <ul>
+            <li>
+                <a href="/posts/post-1/">My First Blog Post</a>
+            </li>
+        </ul>
+    </body>
 </html>

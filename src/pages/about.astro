@@ -1,5 +1,21 @@
 ---
+const pageTitle = "About Me";
 
+const identity = {
+    firstName: "Matias",
+    lastName: "Tupper",
+    pronouns: "he/him",
+    email: "matias.a.tupper@gmail.com",
+    phone: "+1 (503) 504-8161",
+    location: "Corvallis, OR",
+    linkedin: "https://www.linkedin.com/in/matias-tupper/",
+    github: "https://github.com/matupper",
+    website: "https://matiastupper.com",
+    hobbies: ["music", "guitar", "reading", "gaming", "programming"],
+    languages: ["English", "Spanish"], 
+}
+
+const skills = ["HTML", "CSS", "JavaScript", "Python", "Nuxt.js", "Git"]
 ---
 
 <html lang="en">
@@ -8,12 +24,21 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>About</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
-		<h1>Matias Tupper's About Page</h1>
-	</body>
+		<h1>{pageTitle}</h1>
+        <h2>Hi! I'm {identity.firstName} </h2>
+        <p>I am an aspiring graphics programmer. Currently finishing my undergrad Computer Science Degree at Oregon State University. I am looking to get my foot in the door and jumpstart my career in graphics programming.</p>
+        <p>I'm located at {identity.location}, getting ready to graduate from Oregon State University in Spring 2026.</p>
+        <p>I'm looking for a job in the graphics programming field. I'm interested in working on games, graphics libraries, and other graphics-related projects.</p>
+        {identity.hobbies.length > 0 && <p>Some of my hobbies include: {identity.hobbies[0]} and {identity.hobbies[1]}.</p>}
+        <h3>Skills</h3>
+        <ul>
+            {skills.map((skill) => (<li>{skill}</li>))}
+        </ul>
+    </body>
 </html>
