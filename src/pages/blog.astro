@@ -1,4 +1,8 @@
 ---
+import "../styles/global.css";
+import NavigationComponent from "../components/Navigation.astro";
+import FooterComponent from "../components/Footer.astro";
+
 const pageTitle = "Blog";
 ---
 <html lang="en">
@@ -9,16 +13,18 @@ const pageTitle = "Blog";
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+	<main>
+        <NavigationComponent />
 		<h1>{pageTitle}</h1>
         <p>This is my blog. Here I'll mostly be posting about my experiences with engineering, programming, and other things. I'll be keepoing this updated almost as a journal to keep trakc of the things I learn on my journey to get into graphics programming.</p>
         <ul>
             <li>
                 <a href="/posts/post-1/">My First Blog Post</a>
             </li>
+			<li>
+				<a href="/posts/astro-post/">Learning Astro</a>
+			</li>
         </ul>
-    </body>
+        <FooterComponent />
+    </main>
 </html>

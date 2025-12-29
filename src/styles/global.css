@@ -1,0 +1,151 @@
+/* =========================
+   Theme Variables
+   ========================= */
+
+   :root {
+    /* Backgrounds */
+    --bg: #2b2e34;
+    --surface: #3d3d3d;
+  
+    /* Text */
+    --text-primary: #dddddd;
+    --text-secondary: #b5bcc9;
+  
+    /* Accents */
+    --accent-primary: #3665d3;
+    --accent-secondary: #3556ac;
+    --accent-hover: #6f8deb;
+  
+    /* Utility */
+    --border-muted: #4a4f58;
+  
+    /* Fonts */
+    --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  /* =========================
+     Base Reset
+     ========================= */
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    color-scheme: dark;
+  }
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+  
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+  
+    background-color: var(--bg);
+    color: var(--text-primary);
+  }
+  
+  /* =========================
+     Typography
+     ========================= */
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  
+  p {
+    margin: 0 0 1.25rem;
+    max-width: 65ch;
+    color: var(--text-primary);
+  }
+  
+  small,
+  .text-muted {
+    color: var(--text-secondary);
+  }
+  
+  /* =========================
+     Links
+     ========================= */
+  
+  a {
+    color: var(--accent-primary);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+  }
+  
+  /* =========================
+     Lists
+     ========================= */
+  
+  ul,
+  ol {
+    padding-left: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* =========================
+     Code (very basic for now)
+     ========================= */
+  
+  pre,
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  
+  code {
+    background: var(--surface);
+    padding: 0.15em 0.35em;
+    border-radius: 4px;
+  }
+  
+  pre {
+    background: var(--surface);
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border-muted);
+  }
+  
+  /* =========================
+     Layout Helpers
+     ========================= */
+  
+  main {
+    padding: 3rem 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid var(--border-muted);
+    margin: 3rem 0;
+  }
+  

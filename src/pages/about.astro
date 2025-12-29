@@ -1,4 +1,8 @@
 ---
+import "../styles/global.css";
+import NavigationComponent from "../components/Navigation.astro";
+import FooterComponent from "../components/Footer.astro";
+
 const pageTitle = "About Me";
 
 const identity = {
@@ -16,6 +20,10 @@ const identity = {
 }
 
 const skills = ["HTML", "CSS", "JavaScript", "Python", "Nuxt.js", "Git"]
+
+const skillColor = "red";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html lang="en">
@@ -26,10 +34,8 @@ const skills = ["HTML", "CSS", "JavaScript", "Python", "Nuxt.js", "Git"]
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+	<main>
+        <NavigationComponent />
 		<h1>{pageTitle}</h1>
         <h2>Hi! I'm {identity.firstName} </h2>
         <p>I am an aspiring graphics programmer. Currently finishing my undergrad Computer Science Degree at Oregon State University. I am looking to get my foot in the door and jumpstart my career in graphics programming.</p>
@@ -38,7 +44,8 @@ const skills = ["HTML", "CSS", "JavaScript", "Python", "Nuxt.js", "Git"]
         {identity.hobbies.length > 0 && <p>Some of my hobbies include: {identity.hobbies[0]} and {identity.hobbies[1]}.</p>}
         <h3>Skills</h3>
         <ul>
-            {skills.map((skill) => (<li>{skill}</li>))}
+            {skills.map((skill) => (<li class="skill">{skill}</li>))}
         </ul>
-    </body>
+        <FooterComponent /> 
+    </main>
 </html>
