@@ -22,7 +22,9 @@ Starting an Astro project is as simple as running `npm create astro@latest`. The
 
 Once you got your project started, to preview the site you can run `npm run dev` to open an Astro dev server you can prieview in your browser.
 
-To start editing the ocntent on your site, go to `src/pages/` in your directory. There you'll find `index.astro` along with any other pages that make up your site. `.astro` files are how you build pages for your site, and like always `index.astro` will be your default "home" page. the `index.astro` file of a fresh project will look something like this:
+### Astro Pages
+
+To start editing the content on your site, go to `src/pages/` in your directory. There you'll find `index.astro` along with any other pages that make up your site. `.astro` files are how you build pages for your site, and like always `index.astro` will be your default "home" page. the `index.astro` file of a fresh project will look something like this:
 
 ```
 ---
